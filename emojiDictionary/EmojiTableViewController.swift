@@ -26,7 +26,7 @@ class EmojiTableViewController: UITableViewController {
        cell.textLabel?.text = emoji[indexPath.row]
         return cell
     }
-    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "segueConnector", sender: nil)
     }
 }
