@@ -32,6 +32,9 @@
                             <outlet property="delegate" destination="aK0-3n-JMV" id="q5g-1h-lFL"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="b8V-nH-kAx" kind="show" identifier="segueConnector" id="A1j-yh-fx7"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iIV-6Y-ZDh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

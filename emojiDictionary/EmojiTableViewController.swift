@@ -24,8 +24,9 @@ class EmojiTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "firstCell", for: indexPath)
 
        cell.textLabel?.text = emoji[indexPath.row]
-       
-        
         return cell
+    }
+    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "segueConnector", sender: nil)
     }
 }
