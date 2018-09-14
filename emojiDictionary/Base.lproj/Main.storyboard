@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Emoji Table View Controller-->
+        <!--Emoji Dictionary-->
         <scene sceneID="jYi-Cs-Ahb">
             <objects>
                 <tableViewController id="aK0-3n-JMV" customClass="EmojiTableViewController" customModule="emojiDictionary" customModuleProvider="target" sceneMemberID="viewController">
@@ -32,7 +32,9 @@
                             <outlet property="delegate" destination="aK0-3n-JMV" id="q5g-1h-lFL"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="STp-Vk-zO7"/>
+                    <navigationItem key="navigationItem" title="Emoji Dictionary" id="STp-Vk-zO7">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="luI-FB-ZVB"/>
+                    </navigationItem>
                     <connections>
                         <segue destination="b8V-nH-kAx" kind="show" identifier="segueConnector" id="A1j-yh-fx7"/>
                     </connections>
