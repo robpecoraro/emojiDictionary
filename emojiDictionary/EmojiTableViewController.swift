@@ -10,7 +10,7 @@ import UIKit
 
 class EmojiTableViewController: UITableViewController {
     
-    var emoji = ["🔫","😀","🤪","😱","💩","💯","😍","🥑","🌪"]
+    var emojis = ["🔫","😀","🤪","😱","💩","💯","😍","🥑","🌪"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,15 +18,20 @@ class EmojiTableViewController: UITableViewController {
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return emoji.count
+        return emojis.count
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "firstCell", for: indexPath)
 
-       cell.textLabel?.text = emoji[indexPath.row]
+       cell.textLabel?.text = emojis[indexPath.row]
         return cell
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "segueConnector", sender: nil)
+        let emoji = emojis[indexPath.row]
+        performSegue(withIdentifier: "segueConnector", sender: emoji)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+       let emojiVC = segue.destination as! emojiDefinitationViewController
+        emojiVC.emoji = sender as! String
     }
 }
