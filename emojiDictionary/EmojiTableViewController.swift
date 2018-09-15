@@ -10,7 +10,7 @@ import UIKit
 
 class EmojiTableViewController: UITableViewController {
     
-    var emojis = ["🔫","😀","🤪","😱","💩","💯","😍","🥑","🌪"]
+    var emojis = ["🔫","😀","🤪","😱","💩","💯","😍","🥑","🌪","⛪️"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
